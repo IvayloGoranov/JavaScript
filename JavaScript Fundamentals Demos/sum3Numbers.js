@@ -1,12 +1,9 @@
 
-function printOrderedListOfNumbers(n) {
-    let html = '<ul>\n';
-    for (let i = 1; i <= n; i++) {
-        let color = 'blue';
-        if (i % 2 != 0) color = 'green';
-        html += `  <li><span style='color: ${color}'>${i}</span></li>\n`;
-    }
-    html += '</ul>';
-
-    return html;
+function sumNumbers(input) {
+    let a = Number(input[0]);
+    let b = Number(input[1]);
+    let c = Number(input[2]);
+    let sum = a + b + c;
+    console.log(sum);
 }
+
