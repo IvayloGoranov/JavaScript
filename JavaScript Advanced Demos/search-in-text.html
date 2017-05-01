@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Search in text</title>
+    </head>
+
+    <body>
+        <ul id="towns">
+            <li>Sofia</li>
+            <li>Pleven</li>
+            <li>Varna</li>
+            <li>Plovdiv</li>
+        </ul>
+
+        <input type="text" id="searchText" />
+        <button onclick="search()">Search</button>
+
+        <div id="result"></div>
+    </body>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        function search() {
+            let searchText = $('#searchText').val();
+            let matches = 0;
+            $("#towns li").each((index, item) => {
+                if (item.textContent.includes(searchText)) {
+                    $(item).css("font-weight", "bold");
+                    matches++;
+                } else
+                    $(item).css("font-weight", "");
+            });
+            $('#result').text(matches + " matches found.");
+        }
+    </script>
+
+</html>
