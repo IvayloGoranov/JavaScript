@@ -9,4 +9,3 @@ let commandProcessor = (function() {
         print: () => console.log(text)
     }
 })();
-
