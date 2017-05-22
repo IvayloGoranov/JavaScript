@@ -30,11 +30,21 @@ class RectangleClass {
     }
 }
 
+class SquareClass extends RectangleClass {
+    constructor(width, height, color) {
+        super(width, height, color);
+    }
+}
+
 let r = new RectangleClass();
 r.width = 5;
 r.height = 3;
 console.log(r.area);
 console.log(r.calcArea());
+
+let sq = new SquareClass(5, 5);
+console.log(sq.area);
+console.log(sq);
 
 //Old way...
 function Rectangle(width, height) {
@@ -48,4 +58,12 @@ Rectangle.prototype.area = function () {
 
 let rect = new Rectangle(3, 5);
 console.log(rect.area());
+
+let rect1 = new Rectangle();
+let square = Object.create(rect1); //prototype chaining
+square.width = 3;
+square.height = 3;
+console.log(square.area());
+console.log(square);
+
 
