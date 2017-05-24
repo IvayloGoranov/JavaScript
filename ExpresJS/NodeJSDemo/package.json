@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-demo",
+  "version": "0.0.1",
+  "description": "Demo project for Node JS",
+  "main": "index.js",
+  "engine": "6.10.0", 
+  "scripts": {
+	"start": "node index.js"
+  },
+  "keywords": [
+    "demo",
+    "project",
+    "nodejs"
+  ],
+  "author": "ivaylo goranov",
+  "license": "MIT"
+}

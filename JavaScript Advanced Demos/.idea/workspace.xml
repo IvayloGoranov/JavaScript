@@ -18,16 +18,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="defining-classes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/defining-classes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="abstract-class.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/abstract-class.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/iterable.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,13 +42,13 @@
         <entry file="file://$PROJECT_DIR$/generator-functions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spread-operator.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spread-operator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spread-operator.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -68,31 +58,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mixin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mixin.js">
+      <file leaf-file-name="ajax-load.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax-load.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete-from-table.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/delete-from-table.html">
+      <file leaf-file-name="ajax.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ajax.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+            <state relative-caret-position="484">
+              <caret line="32" column="60" lean-forward="true" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cards.js">
+      <file leaf-file-name="countries-table.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/countries-table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="29" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/text.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -123,11 +123,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="tsconfig.json" />
         <option value="package_json" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -160,6 +160,10 @@
         <option value="$PROJECT_DIR$/iterable.js" />
         <option value="$PROJECT_DIR$/generator-functions.js" />
         <option value="$PROJECT_DIR$/spread-operator.js" />
+        <option value="$PROJECT_DIR$/ajax-laod.html" />
+        <option value="$PROJECT_DIR$/text.html" />
+        <option value="$PROJECT_DIR$/ajax-load.html" />
+        <option value="$PROJECT_DIR$/ajax.html" />
       </list>
     </option>
   </component>
@@ -196,6 +200,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,7 +216,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,13 +231,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Node.js.spread-operator.js">
-    <configuration default="false" name="mixin.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="mixin.js" working-dir="$PROJECT_DIR$">
-      <method />
-    </configuration>
-    <configuration default="false" name="abstract-class.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="abstract-class.js" working-dir="$PROJECT_DIR$">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.ajax.html">
     <configuration default="false" name="iterable.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="iterable.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
@@ -241,6 +239,12 @@
       <method />
     </configuration>
     <configuration default="false" name="spread-operator.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="spread-operator.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="false" name="ajax-load.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScript Advanced Demos/ajax-load.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="ajax.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScript Advanced Demos/ajax.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -303,19 +307,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.mixin.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.abstract-class.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.iterable.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.generator-functions.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.spread-operator.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.iterable.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.generator-functions.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.spread-operator.js" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.ajax-load.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.ajax.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.spread-operator.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.generator-functions.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.iterable.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.abstract-class.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.mixin.js" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.ajax.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.ajax-load.html" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.spread-operator.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.generator-functions.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.iterable.js" />
       </list>
     </recent_temporary>
   </component>
@@ -348,22 +352,23 @@
       <workItem from="1495111261904" duration="599000" />
       <workItem from="1495131929301" duration="598000" />
       <workItem from="1495177817880" duration="1233000" />
-      <workItem from="1495441736846" duration="260000" />
+      <workItem from="1495441736846" duration="575000" />
+      <workItem from="1495520502948" duration="1689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41343000" />
+    <option name="totallyTimeSpent" value="43347000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24851191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32636657" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32636657" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -388,27 +393,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/link-buttons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link-buttons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link-buttons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extract-text.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -598,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries-table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/show-more-text.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -637,7 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,7 +681,7 @@
     <entry file="file://$PROJECT_DIR$/iterable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -713,7 +689,7 @@
     <entry file="file://$PROJECT_DIR$/generator-functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -722,6 +698,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries-table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax-load.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="32" column="60" lean-forward="true" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
           <folding />
         </state>
       </provider>
