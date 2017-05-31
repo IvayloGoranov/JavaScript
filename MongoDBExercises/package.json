@@ -1,0 +1,14 @@
+{
+  "name": "mongodb-exercises",
+  "version": "0.0.1",
+  "description": "MongoDb exrcises",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "mongoose": "^4.10.4"
+  },
+  "author": "ivaylo goranov",
+  "license": "MIT"
+}
