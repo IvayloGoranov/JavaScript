@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>React demos</title>
+        <script src="https://unpkg.com/react/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom/dist/react-dom.js"></script>
+        <script src="https://unpkg.com/babel-standalone"></script>
+    </head>
+
+    <body>
+        <div id="app">A React component will be rendered here</div>
+        <script type="text/babel">
+            /*ReactDOM.render(<div>Hello, React!</div>,
+                document.getElementById('app'));*/
+
+            class Person extends React.Component {
+                render() {
+                    return (
+                            <div>
+                                <h1>{this.props.person}</h1>
+                                <p>Tel. {this.props.phone}</p>
+                            </div>
+                    )
+                }
+            }
+
+            ReactDOM.render(
+                    <Person person="Nakov"
+                            phone="+359 2 981 981" />,
+                document.getElementById('app')
+            );
+
+        </script>
+    </body>
+</html>
