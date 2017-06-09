@@ -1,0 +1,23 @@
+extends ../layout.pug
+
+block content
+    form(method='get', action='/articles/list')
+        input(name='search', type='text')
+        input(type='submit', value='Search')
+
+    .cards
+        each article in articles
+            .product-card
+                h2=article.title
+
+                a.btn.btn-small.btn-success(href=`/articles/details/${article._id}`)= 'Details'
+                a.btn.btn-small.btn-success(href=`/articles/edit/${article._id}`)= 'Edit'
+                a.btn.btn-small.btn-danger(href=`/articles/delete/${article._id}`)= 'Delete'
+
+    div
+        if hasPreviousPage
+            a.btn.btn-small.btn-success(href=`/articles/list?page=${previousPage}&search=${search}`)= 'Previous page'
+        else if hasNextPage
+            a.btn.btn-small.btn-success(href=`/articles/list?page=${nextPage}&search=${search}`)= 'Next page'
+
+

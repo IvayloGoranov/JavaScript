@@ -1,0 +1,25 @@
+extends ../layout.pug
+
+block content
+    form.form.center-form(method='post')
+        h2 Edit Article
+        .form-group
+            label(for='title') Article
+            input#title.input-field(name='title', type='text', value=article.title )
+        .form-group
+            label(for='content') Description
+            textarea#content.input-field(name='content', type='text')= article.content
+
+        .form-group
+            label(for='category') category
+            select.input-field(name='category')
+                each category in categories
+                    if (category._id.equals(article.category))
+                        option(value=`${category._id}` selected)=category.name
+                    else
+                        option(value=`${category._id}`)=category.name
+
+        .form-group
+            input.form-btn.btn.btn-warning(type='submit', value='Edit')
+
+

@@ -1,0 +1,19 @@
+extends ../layout.pug
+
+block content
+    form.form.center-form(method='post')
+        h2 Add Article
+        .form-group
+            label(for='title') Title
+            input#title.input-field(name='title', type='text' value=title)
+        .form-group
+            label(for='content') Content
+            textarea#content.input-field(name='content', type='text' value=content)
+        .form-group
+            label(for='category') Category
+            select.input-field(name='category')
+                each category in categories
+                    option(value=`${category._id}`)=category.name
+        .form-group
+            input.form-btn.btn(type='submit', value='Add')
+
