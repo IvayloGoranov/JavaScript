@@ -1,4 +1,4 @@
-import dispatcher from '../dispatcher'
+import dispatcher from '../dispatcher';
 
 let booksActions = {
     booksAll: () => {
@@ -10,6 +10,21 @@ let booksActions = {
     bookById: (id) => {
         dispatcher.dispatch({
             type: 'BOOK_BY_ID',
+            id: id
+        })
+    },
+
+    createBook: (title, author, comments) => {
+        dispatcher.dispatch({
+            type: 'CREATE_BOOK',
+            title: title,
+            author: author
+        })
+    },
+
+    deleteBook: (id) => {
+        dispatcher.dispatch({
+            type: 'DELETE_BOOK',
             id: id
         })
     }
