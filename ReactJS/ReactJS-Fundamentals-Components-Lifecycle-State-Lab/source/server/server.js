@@ -17,7 +17,7 @@ module.exports = () => {
     // Initialize passport
     require('./config/passport')();
 
-    // Attach middlewares, including passport
+    // Attach middleares, including passport
     expressConfig.attachMiddleWares(app);
 
     // Import server-routes.

@@ -1,50 +1,51 @@
 import React from 'react';
-import MovieCard from "./subcomponents/MovieCard";
+
+import HomeActions from '../actions/HomeActions';
+import HomeStore from '../stores/HomeStore';
+
+import MovieCard from './sub-components/MovieCard';
 
 export default class Home extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {
-            topTenMovies: [],
-            error: ''
-        };
-    };
+
+        this.state = HomeStore.getState();
+
+        this.onChange = this.onChange.bind(this);
+    }
+
+    onChange(state) {
+        this.setState(state);
+    }
+
+    componentDidMount() {
+        HomeStore.listen(this.onChange);
+
+        HomeActions.getTopTenMovies();
+    }
+
+    componentWillUnmount() {
+        HomeStore.unlisten(this.onChange);
+    }
 
     render() {
-        let topTenMovies = this.state.topTenMovies.map((movie) => {
+        let movies = this.state.topTenMovies.map((movie, index) => {
             return (
-                <MovieCard key={movie._id} movie={movie} index={movie._id}/>
+                <MovieCard key={ movie._id }
+                           movie={ movie }
+                           index={ index } />
             );
         });
 
         return (
-            <div className="container">
-                <h3 className="text-center"> Welcome to
-                    <strong>Movie Database</strong>
+            <div className='container'>
+                <h3 className='text-center'>Welcome to
+                    <strong> Movie Database</strong>
                 </h3>
                 <div className="list-group">
-                    {topTenMovies}
+                    { movies }
                 </div>
             </div>
         );
-    };
-
-    componentDidMount(){
-        let request = {
-            method: 'get',
-            url: 'api/movies/top-ten'
-        };
-
-        $.ajax(request)
-            .done((data) => {
-                this.setState({
-                    topTenMovies: data
-                });
-            })
-            .fail((err) => {
-                this.setState({
-                    error: err.responseJSON.message
-                });
-            });
-    };
-};
+    }
+}
