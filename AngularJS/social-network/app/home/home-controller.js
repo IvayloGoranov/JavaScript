@@ -11,9 +11,13 @@ angular.module('socialNetwork.home', [
         });
     }])
 
-    .controller('HomeCtrl', ['$scope', 'authentication', function($scope, authentication) {
+    .controller('HomeCtrl', ['$scope', '$location', 'authentication', function($scope, $location, authentication) {
         $scope.login = function(user){
-            authentication.loginUser(user);
+            authentication.loginUser(user)
+                .then(function(loggedInUser) {
+                    console.log(loggedInUser);
+                    $location.path('/newsFeed');
+                });
         };
 
         $scope.register = function(user){

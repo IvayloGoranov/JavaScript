@@ -3,8 +3,6 @@
 angular.module('socialNetwork.users.authentication', [])
 
     .factory('authentication', ['$http', '$q', 'BASE_URL', function($http, $q, BASE_URL) {
-        console.log(BASE_URL);
-
         function registerUser(user){
             var deferred = $q.defer();
 

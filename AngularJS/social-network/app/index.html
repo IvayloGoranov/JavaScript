@@ -12,7 +12,7 @@
         <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
 
-    <body>
+    <body ng-controller="MainCtrl">
         <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -24,12 +24,22 @@
                     </button>
                 </div>
                 <div class="navbar-collapse collapse" id="navbar-main">
-                    <ul class="nav navbar-nav">
-
+                    <ul ng-if="isAuthenticated" class="nav navbar-nav">
                         <li>
-                            <a href="#/">Home</a>
+                            <a href="#/newsFeed">News Feed</a>
                         </li>
-
+                        <li>
+                            <a href="#/friendRequests">Friend Requests</a>
+                        </li>
+                        <li>
+                            <a href="#/settings">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#/changePassword">Change Password</a>
+                        </li>
+                        <li>
+                            <a href="#/logout">Logout</a>
+                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -49,7 +59,11 @@
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="app.js"></script>
+        <script src="common/main-controller.js"></script>
+        <script src="users/identity.js"></script>
         <script src="home/home-controller.js"></script>
+        <script src="newsFeed/news-feed-controller.js"></script>
         <script src="users/authentication.js"></script>
+        <script src="newsFeed/feed.js"></script>
     </body>
 </html>
