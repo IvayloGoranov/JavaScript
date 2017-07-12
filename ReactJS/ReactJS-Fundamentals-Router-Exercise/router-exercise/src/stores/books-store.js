@@ -45,14 +45,6 @@ class BooksStore extends EventEmitter {
 
     handleAction (action) {
         switch (action.type) {
-            case 'BOOKS_ALL': {
-                this.getAll();
-                break;
-            }
-            case 'BOOK_BY_ID': {
-                this.getById(action.id);
-                break;
-            }
             case 'CREATE_BOOK': {
                 this.createBook(action.title, action.author);
                 break;
