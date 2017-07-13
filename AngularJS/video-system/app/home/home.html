@@ -1,0 +1,44 @@
+<div class="row">
+    <label>Filter by</label>
+    <select ng-model="filterValue.category">
+        <option value="">Select Category</option>
+        <option ng-repeat="category in categories" value="{{category}}">
+            {{category}}
+        </option>
+    </select>
+    <select ng-model="filterValue.date">
+        <option value="">Select Date</option>
+        <option ng-repeat="date in dates" value="{{date}}">
+            {{date | date:'mediumDate'}}
+        </option>
+    </select>
+    <input type="checkbox" name="filter" ng-model="filterValue.hasSubtitles"/>With subs
+    <button class="btn btn-primary" ng-click="filter(filterValue)">Filter</button>
+</div>
+
+<div class="row">
+    <table class="table table-striped table-hover ">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Picture</th>
+            <th>Length</th>
+            <th>Category</th>
+            <th>Subscribers count</th>
+            <th>Date</th>
+            <th>Subtitles</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="video in videos">
+            <td>{{video.title}}</td>
+            <td><img ng-src={{video.picture}}" alt="Video Picture"/></td>
+            <td>{{video.length}}</td>
+            <td>{{video.category}}</td>
+            <td>{{video.subscribers}}</td>
+            <td>{{video.date | date:'mediumDate'}}</td>
+            <td>{{video.hasSubtitles === true ? "yes" : "no"}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
