@@ -1,11 +1,11 @@
-'use strict';
-
 angular.module('socialNetwork.common.footer', [])
-    .directive('footer', function() {
+    .directive('footer', [function() {
         return {
             restrict: 'A',
-            replace: true,
-            templateUrl: 'common/footer-directive.html'
+            templateUrl: 'app/common/footer-directive.html',
+            link: function (scope, element) {
+                
+            }
         };
-});
-
+    }]);
+    

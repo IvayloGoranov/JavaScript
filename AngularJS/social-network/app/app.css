@@ -1,16 +1,16 @@
 /* app css stylesheet */
 
 body {
-  margin-top: 60px;
+    margin-top: 60px;
 }
 
 .border {
-  border: 1px solid black;
-  padding: 15px;
+    border: 1px solid black;
+    padding: 15px;
 }
 
 .margin-bottom-100 {
-  margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 .menu {
@@ -18,6 +18,22 @@ body {
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
+}
+
+.hidden-element {
+    display: none;
+}
+
+.disabled-button {
+    opacity: 0.5;
+}
+
+.small-image {
+    width: 250px;
+}
+
+input.ng-invalid.ng-dirty {
+    background-color: pink;
 }
 
 .menu:before {
@@ -32,7 +48,12 @@ body {
   display: inline;
 }
 
-.menu > li + li:before {
+.menu > li:before {
   content: "|";
   padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
 }
