@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Categories And Products</title>
+
+        <!-- Style sheets -->
+        <!--<link href="css/toastr.css" rel="stylesheet" />-->
+        <link href="Assets/css/app.css" rel="stylesheet" />
+
+        <!-- Library Scripts -->
+        <script src="Scripts/angular.js"></script>
+        <script src="Scripts/angular-resource.js"></script>
+        <script src="Scripts/angular-ui-router.js"></script>
+        <script src="Scripts/jquery-3.1.1.js"></script>
+
+        <!-- Application Script -->
+        <script src="App/app.js"></script>
+
+        <!-- Services -->
+        <script src="App/Shared/Settings/commonServices.js"></script>
+        <script src="App/Shared/Directives/onFinishRenderDirective.js"></script>
+        <script src="App/categoriesList/categoriesListService.js"></script>
+        <script src="App/categoriesList/productsService.js"></script>
+        <script src="App/categoriesList/changeOrderService.js"></script>
+        <script src="App/categoryDetails/categoryDetailsService.js"></script>
+        <script src="App/categoryDetails/saveCategoryService.js"></script>
+        <script src="App/categoryDetails/deleteProductService.js"></script>
+        <script src="App/categoryDetails/saveProductService.js"></script>
+        <script src="App/categoryDetails/deleteCategoryService.js"></script>
+
+         <!--Category Controllers--> 
+        <script src="App/categoriesList/categoriesListController.js"></script>
+        <script src="App/categoryDetails/categoryDetailsController.js"></script>
+    </head>
+
+    <body ng-app="productsAndCategories">
+        
+        <div ui-view></div>
+    
+    </body>
+
+</html>

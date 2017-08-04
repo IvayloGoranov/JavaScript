@@ -1,0 +1,110 @@
+﻿<div class="lop-main-container">
+
+    <h5 class="red-color">Category Details</h5>
+
+    <div ng-show="vm.SuccessMessage" class="green-background">
+        {{ vm.SuccessMessage }}
+    </div>
+    <div ng-show="vm.model.ErrorMessage" class="red-background">
+        {{vm.model.ErrorMessage}}
+    </div>
+
+    <hr>
+
+    <form name="categoryDetailsForm" novalidate>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Category name" style="width:50%;" ng-model="vm.model.CategoryItem.Name" required />
+        <span ng-show="categoryDetailsForm.name.$invalid &&
+              categoryDetailsForm.name.$dirty">
+            Category name is required.
+        </span>
+
+        <div style="display:inline-block;width:100%;">
+            <div style="float:left; width:100px;">
+                <div style="margin-top: 5px; margin-left: 10px;">
+                    Description
+                </div>
+            </div>
+            <div style="float:left;width: 395px; margin-top: 10px;">
+                <textarea name="description" id="description" placeholder="Category description" style="width: 397px;"
+                          rows="7" ng-model="vm.model.CategoryItem.Description"></textarea>
+            </div>
+            <div style="width: 295px; float: left;margin-top: 20px;">
+                <div class="vertical-line float-right">
+                    <div class="box red-background pointer" ng-click="vm.selectColor(2)"></div>
+                    <div class="box green-background pointer" ng-click="vm.selectColor(0)"></div>
+                    <div class="box blue-background pointer" ng-click="vm.selectColor(1)"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div style="display:inline-block;width:100%;">
+        <div style="width: 100px;float: left; margin: 11px 0px 0px 5px;">Selected Color</div>
+        <div style="width:250px; float:left; margin: 5px 0px 0px 0px;"><div class="box" ng-class="vm.model.SelectedColorClass"></div></div>
+    </div>
+
+    <hr>
+
+    <h5 class="red-color">Products</h5>
+
+    <div class="table" ng-if="vm.model.CategoryItem.Id > 0">
+        <div class="row">
+            <div class="column" style="width:55%;">
+                Product Name
+            </div>
+            <div class="column" style="width:10%;">
+                Price
+            </div>
+            <div class="column" style="width:34%;">
+                Actions
+            </div>
+        </div>
+
+        <form name="productsForm" novalidate>
+            <div class="row" ng-repeat="product in vm.model.ProductItems">
+                <div class="column" style="width:55%;">
+                    <input type="text" name="productName" id="productName" placeholder="Product name"
+                           required ng-model="product.Name" />
+                    <span ng-show="productsForm.productName.$invalid && productsForm.productName.$dirty">
+                        Product name is required.
+                    </span>
+                </div>
+                <div class="column" style="width:10%;">
+                    <input type="number" name="productPrice" id="productPrice" placeholder="Product price" min="0"
+                           required ng-model="product.Price" />
+                    <span ng-show="productsForm.productPrice.$invalid && productsForm.productPrice.$dirty">
+                        Product price should be a number bigger than zero.
+                    </span>
+                </div>
+                <div class="column" style="width:34%;">
+                    <button ng-click="vm.deleteProduct(product)">Delete</button>
+                    <button ng-click="vm.saveProduct(product)">Edit</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column" style="width:55%;">
+                    <input type="text" name="newProductName" id="newProductName" placeholder="Product name"
+                           required ng-model="vm.model.NewProductName" />
+                    <span ng-show="productsForm.newProductName.$invalid && productsForm.newProductName.$dirty">
+                        Product name is required.
+                    </span>
+                </div>
+                <div class="column" style="width:10%;">
+                    <input type="number" name="newProductPrice" id="newProductPrice" placeholder="Product price"
+                           min="0" required ng-model="vm.model.NewProductPrice">
+                    <span ng-show="productsForm.newProductPrice.$invalid && productsForm.newProductPrice.$dirty">
+                        Product price should be a number bigger than zero.
+                    </span>
+                </div>
+                <div class="column" style="width:34%;">
+                    <button ng-click="vm.addProduct()">Add</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <button style="margin: 0px 0px 0px 10px;" ng-click="vm.deleteCategory()" ng-disabled="vm.model.CategoryItem.Id == 0">Delete</button>
+    <button class="float-right" ng-click="vm.saveCategory()" ng-disabled="categoryDetailsForm.$invalid">Save</button>
+</div>

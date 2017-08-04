@@ -1,0 +1,134 @@
+﻿<div class="lop-main-container">
+
+    <h5 class="red-color">Category List</h5>
+    
+    <div ng-show="vm.SuccessMessage" class="green-background">
+        {{vm.SuccessMessage}}
+    </div>
+    <div ng-show="vm.model.ErrorMessage" class="red-background">
+        {{vm.model.ErrorMessage}}
+    </div>
+
+    <hr>
+
+    <fieldset>
+        <legend>Filter by:</legend>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter category name to filter by" ng-model="vm.model.NameFilter" />
+        <button ng-click="vm.filterByName()">Search</button>
+        <button ng-click="vm.resetNameFilter()">Reset</button>
+        <span class="float-right">Show prices</span>
+        <label class="switch float-right">
+            <input type="checkbox" ng-if="vm.model.IsPriceShown" checked="checked" ng-click="vm.showPrices()"/>
+            <input type="checkbox" ng-if="!vm.model.IsPriceShown" ng-click="vm.showPrices()"/>
+            <span class="slider round"></span>
+        </label>
+    </fieldset>
+
+    <div class="center-text">
+        <p>Total Prices: {{vm.model.TotalPrices}}</p>
+    </div>
+
+    <button style="margin: 0px 0px 0px 10px;" ng-click="vm.deleteCategories()" ng-disabled="!(vm.model.ItemList.length > 0)">Delete</button>
+    <button class="float-right" ui-sref="categoryDetails({categoryId: 0})">Add New</button>
+
+    <hr>
+
+    <div class="row" ng-if="vm.model.ItemList.length > 0">
+        <div class="column" style="width:17%;">
+            <input type="checkbox" ng-if="!vm.model.IsSelectedAll" ng-click="vm.selectAll()" />
+            <input type="checkbox" ng-if="vm.model.IsSelectedAll" ng-click="vm.selectAll()" />
+            Select All
+        </div>
+        <div class="column" style="width:55%;">
+            Category Name
+        </div>
+        <div class="column" style="width:10%;">
+            Price
+        </div>
+        <div class="column" style="width:17%;">
+            Actions
+        </div>
+    </div>
+
+    <div class="table" id="categories-table" ng-repeat="category in vm.model.ItemList | orderBy:'OrderNo' | limitTo : vm.model.ItemsToShowCount" on-finish-render="ngRepeatFinished">
+        <div class="row" ng-class="category.SelectedColorClass">
+            <div class="column" style="width:17%;">
+                <input type="checkbox" ng-if="!category.IsChecked" ng-click="vm.selectCategory(category)" />
+                <input type="checkbox" ng-if="category.IsChecked" ng-click="vm.selectCategory(category)" checked="checked" />
+                <!--<span class="pointer up-arrow" ng-click="vm.moveUp($event)">&#8679;</span>
+                <span class="pointer down-arrow" ng-click="vm.moveDown($event)">&#8681;</span>-->
+                <span class="pointer up-arrow" ng-show="category.OrderNo > 1"  ng-click="vm.moveUp(category)">&#8679;</span>
+                <span class="pointer down-arrow" ng-show="category.OrderNo < vm.model.MaxOrderNo" ng-click="vm.moveDown(category)">&#8681;</span>
+            </div>
+            <div class="column" style="width:55%;">
+                {{category.CategoryName}}
+            </div>
+            <div class="column" style="width:10%;">
+                <span ng-show="vm.model.IsPriceShown">
+                    {{category.ProductsTotalPrice}}
+                </span>
+                &nbsp;
+            </div>
+            <div class="column" style="width:17%;">
+                <button ng-click="vm.showCategoryInfo(category)">{{category.IsCategoryDetailsVisible ? "Hide" : "Show"}}</button>
+                <button ui-sref="categoryDetails({categoryId: category.CategoryID})">Edit</button>
+            </div>
+        </div>
+
+        <div class="row" ng-if="category.IsCategoryDetailsVisible">
+            <div class="row">
+                <div class="column" style="width:36%;">
+                    Product Name
+                </div>
+                <div class="column" style="width:17%;">
+                    Created Date
+                </div>
+                <div class="column" style="width:10%;">
+                    Price
+                </div>
+                <div class="column" style="width:36%;">
+                    <div style="float: left;" class="box red-background pointer" ng-click="vm.selectColor(category, 2)"></div>
+                    <div style="float: left;" class="box green-background pointer" ng-click="vm.selectColor(category, 0)"></div>
+                    <div style="float: left;" class="box blue-background pointer" ng-click="vm.selectColor(category, 1)"></div>
+                </div>
+            </div>
+
+            <div class="table" ng-repeat="product in category.ProductItems">
+                <div class="row">
+                    <div class="column" style="width:36%;">
+                        {{product.Name}}
+                    </div>
+                    <div class="column" style="width:17%;">
+                        {{product.CreatedDate}}
+                    </div>
+                    <div class="column" style="width:10%;">
+                        {{product.Price}}
+                    </div>
+                    <div class="column" style="width:36%;">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column" style="width:36%;">
+                    <p></p>
+                </div>
+                <div class="column" style="width:17%;">
+                    <p></p>
+                </div>
+                <div class="column" style="width:10%;">
+                    Total Price: {{category.ProductsTotalPrice}}
+                </div>
+                <div class="column" style="width:36%;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lop-view-more" ng-click="vm.viewMore()">
+        Showing {{vm.model.ItemsToShowCount < vm.model.ItemList.length ? vm.model.ItemsToShowCount : vm.model.ItemList.length | number:0 }}
+        of {{vm.model.AllItemsCount | number:0 }} items
+    </div>
+</div>
