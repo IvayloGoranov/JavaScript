@@ -10,48 +10,48 @@
         <title>Ads</title>
     </head>
 
-<body>
+    <body>
 
-    <header id="app-header">
-        <div ng-include="'templates/partial/header.html'"></div>
-    </header>
+        <header id="app-header">
+            <div ng-include="'templates/partial/header.html'"></div>
+        </header>
 
-    <div id='app-content'>
-        <div class='col-md-2 sidebar'>
-            <div ng-include="'templates/partial/left-sidebar.html'"></div>
+        <div id='app-content'>
+            <div class='col-md-2 sidebar'>
+                <div ng-include="'templates/partial/left-sidebar.html'"></div>
+            </div>
+
+            <div class='col-md-8' ng-view></div>
+
+            <div class='col-md-2 sidebar' ng-controller="RightSidebarController">
+                <div ng-include="'templates/partial/right-sidebar.html'"></div>
+            </div>
+
+            © Software University Foundation (softuni.org). This work is licensed under the CC-BY-NC-SA license.
+            Follow us:  Page 3 of 10
         </div>
 
-        <div class='col-md-8' ng-view></div>
+        <footer id="app-footer">&copy; 2014 by Software University Foundation, No Rights Reserved </footer>
 
-        <div class='col-md-2 sidebar' ng-controller="RightSidebarController">
-            <div ng-include="'templates/partial/right-sidebar.html'"></div>
-        </div>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-route.js"></script>
+        <script src="lib/angular/angular-resource.js"></script>
+        <script src="lib/jquery/jquery-2.1.3.js"></script>
+        <script src="lib/jquery.noty/jquery.noty.js"></script>
+        <script src="lib/bootstrap/bootstrap-3.1.1.js"></script>
 
-        © Software University Foundation (softuni.org). This work is licensed under the CC-BY-NC-SA license.
-        Follow us:  Page 3 of 10
-    </div>
+        <script src="app.js"></script>
 
-    <footer id="app-footer">&copy; 2014 by Software University Foundation, No Rights Reserved </footer>
+        <script src="js/services/adsServices.js"></script>
+        <script src="js/services/authService.js"></script>
+        <script src="js/services/notifyService.js"></script>
 
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular/angular-route.js"></script>
-    <script src="lib/angular/angular-resource.js"></script>
-    <script src="lib/jquery/jquery-2.1.3.js"></script>
-    <script src="lib/jquery.noty/jquery.noty.js"></script>
-    <script src="lib/bootstrap/bootstrap-3.1.1.js"></script>
+        <script src="js/controllers/AppController.js"></script>
+        <script src="js/controllers/HomeController.js"></script>
+        <script src="js/controllers/LoginController.js"></script>
+        <script src="js/controllers/RegisterController.js"></script>
+        <script src="js/controllers/RightSidebarController.js"></script>
 
-    <script src="app.js"></script>
-
-    <script src="js/services/adsServices.js"></script>
-    <script src="js/services/authService.js"></script>
-    <script src="js/services/notifyService.js"></script>
-
-    <script src="js/controllers/AppController.js"></script>
-    <script src="js/controllers/HomeController.js"></script>
-    <script src="js/controllers/LoginController.js"></script>
-    <script src="js/controllers/RegisterController.js"></script>
-    <script src="js/controllers/RightSidebarController.js"></script>
-
-</body>
+    </body>
 
 </html>
