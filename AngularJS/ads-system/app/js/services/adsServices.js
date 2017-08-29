@@ -2,24 +2,46 @@
 
 app.factory('adsService',
     function ($resource, baseServiceUrl) {
+        var adsResource = $resource(
+            baseServiceUrl + '/api/ads',
+            null,
+            {
+                'getAll': {method:'GET'}
+            }
+        );
+
         return {
-        // TODO: implement a service to get ads
-        };
+            getAds: function(params, success, error) {
+                return adsResource.getAll(params, success, error);
+            }
+        }
     }
 );
 
 app.factory('townsService',
     function ($resource, baseServiceUrl) {
+        var townsResource = $resource(
+            baseServiceUrl + '/api/towns'
+        );
+
         return {
-            // TODO: implement a service to get towns
-        };
+            getTowns: function(success, error) {
+                return townsResource.query(success, error);
+            }
+        }
     }
 );
 
 app.factory('categoriesService',
     function ($resource, baseServiceUrl) {
+        var categoriesResource = $resource(
+            baseServiceUrl + '/api/categories'
+        );
+
         return {
-            // TODO: implement a service to get categories
-        };
+            getCategories: function(success, error) {
+                return categoriesResource.query(success, error);
+            }
+        }
     }
 );
