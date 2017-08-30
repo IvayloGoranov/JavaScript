@@ -11,10 +11,10 @@ app.controller('HomeController',
             adsService.getAds(
                 $scope.adsParams,
                 function success(data) {
-                    // TODO: put the ads in the scope
+                    $scope.ads = data;
                 },
                 function error(err) {
-                    // TODO: display an error message
+                    notifyService.showError("Cannot load ads", err);
                 }
              );
         };

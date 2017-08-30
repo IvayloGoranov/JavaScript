@@ -4,18 +4,16 @@
 </pagination>
 
 <ul class="ads">
-    <li ng-repeat="ad in ads.ads" class="box">
+    <li ng-repeat="ad in ads.ads" class="box" data-id="{{ad.id}}">
         <h1>{{ad.title}}</h1>
-        <div>
-            <strong>Date:</strong> {{ad.date | date:'dd-MMM-yyyy'}}
-        </div>
+        <div><strong>Date:</strong> {{ad.date | date:'dd-MMM-yyyy'}}</div>
         <div ng-if='ad.imageDataUrl'>
-            <strong>Image:</strong>
-            <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+            <strong>Image:</strong><img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
         </div>
-
-        // TODO: display all other fields for the current ad
-
+        <div><strong>Text:</strong> {{ad.text}}</div>
+        <div><strong>Name:</strong> {{ad.ownerName}}</div>
+        <div><strong>Email:</strong> {{ad.ownerEmail}}</div>
+        <div><strong>Phone:</strong> {{ad.ownerPhone}}</div>
     </li>
 </ul>
 
