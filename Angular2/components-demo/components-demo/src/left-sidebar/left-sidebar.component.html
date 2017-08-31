@@ -1,0 +1,10 @@
+<div class="left-sidebar-container">
+  <h3 class="titles-header">Titles</h3>
+  <ul>
+    <li class="title-list-item" *ngFor="let article of articles" (click)="showArticleDetails(article)">
+      {{article.title}}
+    </li>
+  </ul>
+</div>
+
+<article-detail [article]="selectedArticle"></article-detail>

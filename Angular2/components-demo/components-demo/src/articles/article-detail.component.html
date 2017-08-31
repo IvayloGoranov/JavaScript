@@ -1,0 +1,26 @@
+<div class="articles-container">
+  <div *ngIf="article">
+    <div class="title-container">
+      <label>Title:</label>
+      <input type="text" value={{article.title}} disabled />
+    </div>
+
+    <div class="author-container">
+      <label>Author:</label>
+      <input type="text" value={{article.author}} disabled />
+    </div>
+
+    <div class="image-container">
+      <label>Image:</label>
+      <img [src]="article.imageUrl" />
+    </div>
+
+    <div class="description-container">
+      <label>Description:</label>
+      <textarea type="text" value={{article.description}} [style.height.px]="descriptionHeight" disabled ></textarea>
+    </div>
+
+    <button (click)="readMore()"> Read More</button>
+
+  </div>
+</div>

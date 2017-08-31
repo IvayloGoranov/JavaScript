@@ -1,0 +1,23 @@
+.left-sidebar-container {
+  width: 25%;
+  display: inline-block;
+  background-color: #2aabd2;
+  border-radius: 15px;
+}
+
+.title-list-item {
+  list-style-type: none;
+  margin-top: 3%;
+}
+
+.title-list-item:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.titles-header {
+  color: #FFFFFF;
+  margin-left: 13%;
+}
+
+

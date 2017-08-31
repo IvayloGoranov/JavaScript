@@ -1,0 +1,39 @@
+.articles-container {
+  width: 55%;
+  display: inline-block;
+  float: right;
+}
+
+.title-container {
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.title-container input {
+  margin-left: 11%;
+}
+
+.author-container {
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.author-container input {
+  margin-left: 9%;
+}
+
+.image-container {
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.description-container {
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.description-container textarea {
+  margin-left: 5%;
+  height: 30px;
+  width: 50%
+}
