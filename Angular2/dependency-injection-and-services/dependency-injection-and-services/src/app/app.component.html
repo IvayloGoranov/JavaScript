@@ -1,0 +1,31 @@
+<div>
+  <input type="text" id="username" [(ngModel)]="username">
+  <button (click)="showProfileInfo()">Show Profile Info</button>
+  <button (click)="showRepos()">Show Repos For Profile</button>
+</div>
+
+<div *ngIf="profile">
+  <div>
+    Name: <input type="text" value="{{profile.name}}" disabled>
+  </div>
+  <div>
+    Bio: <input type="text" value="{{profile.bio}}" disabled>
+  </div>
+  <div>
+    Location: <input type="text" value="{{profile.location}}" disabled>
+  </div>
+  <div>
+    Following: <input type="text" value="{{profile.following}}" disabled>
+  </div>
+  <div>
+    Followers: <input type="text" value="{{profile.followers}}" disabled>
+  </div>
+</div>
+
+<div *ngIf="repos">
+  <ul>
+    <li *ngFor="let repo of repos">
+      {{repo.name}}
+    </li>
+  </ul>
+</div>
