@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Car Form</h1>
+  <form #carForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="make">Make</label>
+      <input type="text" class="form-control" id="make" name="make" [(ngModel)]="car.make" #make="ngModel" maxlength="10" required>
+    </div>
+
+    <div [hidden]="make.valid || make.pristine" class="alert alert-danger">
+      Make is required!
+    </div>
+
+    <div class="form-group">
+      <label for="model">Model</label>
+      <input type="text" class="form-control" id="model" name="model" [(ngModel)]="car.model"  required>
+    </div>
+
+    <div class="form-group">
+      <label for="engine">Engine</label>
+      <select class="form-control" id="engine" name="engine" required>
+        <option *ngFor="let engine of engines" [value]="engine">
+          {{engine}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="milleage">Milleage</label>
+      <input type="text" class="form-control" id="milleage" name="milleage" [(ngModel)]="car.milleage" >
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!carForm.form.valid">Submit</button>
+    <button type="button" class="btn btn-success" (click)="clearCar()">New Car</button>
+
+  </form>
+</div>
+
