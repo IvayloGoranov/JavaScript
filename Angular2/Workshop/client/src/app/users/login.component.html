@@ -1,0 +1,16 @@
+<h1>Register User</h1>
+<form #loginForm = "ngForm" (submit)="register()">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" id="email" name="email" [(ngModel)] = "user.email" required
+           #email="ngModel">
+    <span [hidden]="email.valid || email.pristine">Email is required</span>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="text" class="form-control" id="password" name="password" [(ngModel)] = "user.password" required
+           #password="ngModel">
+    <span [hidden]="password.valid || password.pristine">Password is required</span>
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid">Login</button>
+</form>
