@@ -10,6 +10,11 @@ export class HttpService {
   constructor(private http: Http){
   }
 
+  public get(url): Observable<any>{
+    return this.http.get(baseUrl + url)
+                    .map(response => response.json());
+  }
+
   public post(url: string, data:{}): Observable<any>{
     const headers = new Headers({
       'Content-Type': 'application/json'

@@ -1,4 +1,14 @@
 <div>
-  <a routerLink="/users/register">Register</a>
-  <a routerLink="/users/login">Register</a>
+  <span>
+    <a routerLink="/">Home</a>
+  </span>
+  <span *ngIf="authenticated">
+    {{ username }}
+    <a href="javascript:void(0)" (click)="logout()">Logout</a>
+  </span>
+  <span *ngIf="!authenticated">
+    <a routerLink="/users/register">Register</a>
+    <a routerLink="/users/login">Login</a>
+    <a routerLink="/cars/add">Add Car</a>
+  </span>
 </div>

@@ -8,6 +8,7 @@ import { IAppState } from '../app.state';
 
 export const USER_REGISTERED = 'users/REGISTER';
 export const USER_LOGGED_IN = 'users/LOGIN';
+export const USER_LOG_OUT = 'users/LOGOUT';
 
 @Injectable()
 export class UsersActions {
@@ -30,6 +31,12 @@ export class UsersActions {
           result
         })
       );
+  }
+
+  logout(){
+    this.ngRedux.dispatch({
+      type: USER_LOG_OUT
+    });
   }
 }
 
