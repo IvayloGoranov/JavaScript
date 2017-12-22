@@ -1,1 +1,10 @@
 <h1>Add Car</h1>
+<form #addCarForm = "ngForm" (submit)="addCar()">
+  <div class="form-group">
+    <label for="make">Make</label>
+    <input type="text" class="form-control" id="make" name="make" [(ngModel)] = "car.make" required
+           #make="ngModel">
+    <span [hidden]="make.valid || make.pristine">Make is required</span>
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!addCarForm.valid">Add</button>
+</form>
