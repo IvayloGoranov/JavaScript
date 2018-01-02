@@ -13,4 +13,8 @@ export class CarsService {
   public addCar(car: AddCarModel): Observable<any>{
     return this.httpService.post('cars/create', car, this.authService.isUserAuthenticated());
   }
+
+  public allCars(page = 1): Observable<any>{
+    return this.httpService.get(`cars/all?page=${{page}}`);
+  }
 }
